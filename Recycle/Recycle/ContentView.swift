@@ -24,58 +24,82 @@ struct ContentView: View {
     
     var body: some View {
         
-        
-        
-            ZStack {
-                Color.green.edgesIgnoringSafeArea(.all)
-                VStack {
-                    Spacer()
-                    Text("Want to know if an item is recyclable?")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.top)
-                    
-                    Spacer()
-                    
-                    Text("Just take a picture!")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                    
-                    Spacer()
-
-                    Button(action: {self.showCaptureImageView.toggle()}) {
-                         Text("♲")
-                           .font(.system(size: 260))
-                            .fontWeight(.black)
-                           .foregroundColor(Color.white)
+        Group {
+            if exists {
+                ZStack {
+                    Color.green.edgesIgnoringSafeArea(.all)
+                    VStack {
+                        HStack {
+                            Button(action: { self.image = nil}) {
+                                Text("Back")
+                                    .foregroundColor(Color.white)
+                            }
+                            .padding([.top, .leading])
+                            Spacer()
+                        }
+                        Spacer()
+                        image?.resizable()
+                          .frame(width: 250, height: 200)
+                          .clipShape(Circle())
+                          .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                          .shadow(radius: 10)
                     }
-                    .scaleEffect(show ? 1.3:1)
-                    .animation(
-                        Animation
-                        .easeInOut
-                            .speed(0.5)
-                            .repeatForever(autoreverses: true)
-                    )
-                    .onAppear(){
-                        self.show.toggle()
+                }
+            }
+            else {
+                ZStack {
+                    Color.green.edgesIgnoringSafeArea(.all)
+                    VStack {
+                        Spacer()
+                        Text("Want to know if an item is recyclable?")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .multilineTextAlignment(.center)
+                            .padding(.top)
+                        
+                        Spacer()
+                        
+                        Text("Just take a picture!")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                        
+                        Spacer()
+
+                        Button(action: {self.showCaptureImageView.toggle()}) {
+                             Text("♲")
+                               .font(.system(size: 260))
+                                .fontWeight(.black)
+                               .foregroundColor(Color.white)
+                        }
+                        .scaleEffect(show ? 1.3:1)
+                        .animation(
+                            Animation
+                            .easeInOut
+                                .speed(0.5)
+                                .repeatForever(autoreverses: true)
+                        )
+                        .onAppear(){
+                            self.show.toggle()
+                        }
+
+                        image?.resizable()
+                          .frame(width: 250, height: 200)
+                          .clipShape(Circle())
+                          .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                          .shadow(radius: 10)
+                    }.sheet(isPresented: $showCaptureImageView) {
+                        CaptureImageView(isShown: self.$showCaptureImageView, image: self.$image).edgesIgnoringSafeArea(.all)
                     }
 
-                    image?.resizable()
-                      .frame(width: 250, height: 200)
-                      .clipShape(Circle())
-                      .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                      .shadow(radius: 10)
-                }.sheet(isPresented: $showCaptureImageView) {
-                    CaptureImageView(isShown: self.$showCaptureImageView, image: self.$image).edgesIgnoringSafeArea(.all)
+
                 }
 
-
             }
-
         }
+    
+    }
 
 }
 

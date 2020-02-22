@@ -1,8 +1,5 @@
-# from google_images_download import google_images_download
-# import json
-
-
-
+from google_images_download import google_images_download
+import json
 
 
 
@@ -11,10 +8,6 @@ recyclable = [
         "paper",
         "newspaper",
         "magazine",
-        "catalog",
-        "map",
-        "phonebook",
-        "mail",
         "paperboard",
         "tissue",
         "box",
@@ -27,26 +20,17 @@ recyclable = [
         "cup",
         "envelope",
         "cardboard",
-        "vase",
         "plastic",
-        "boxboard",
         "box",
         "metal",
         "tin",
         "aluminum",
         "dish",
         "plate",
-        "tray",
         "cookware",
-        "copper",
-        "jewelry",
-        "key",
-        "steel",
-        "pot",
         "bucket",
         "pan",
         "tin",
-        "pyrex",
         "utensil",
         "glass",
         "bottle",
@@ -57,31 +41,24 @@ recyclable = [
         "spoon",
         "fork",
         "office paper",
-        "blind",
-        "curtain",
     ]
 
-key = ', '.join(recyclable)
-print(key)
+
+
+words = ','.join(recyclable)
 
 config = {
-    "Records": [
-        {
-            "keywords": key, 
+            "keywords": words, 
             "limit": 20,
-            "size": "medium",
-            "type": "photo",
-            "print_urls": false
+            "delay": 3,
+            "print_urls": False,
         }
-    ]
-}
+
+# j = json.dumps(config)
 
 
-
-
-
-#response = google_images_download.googleimagesdownload()
-#absolute_image_paths = response.download(classx)
+response = google_images_download.googleimagesdownload()
+absolute_image_paths = response.download(config)
     
 
 special = [

@@ -16,6 +16,7 @@
 		A0519D3024018AC60017DEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0519D2E24018AC60017DEAC /* LaunchScreen.storyboard */; };
 		A0519D3A24018DFE0017DEAC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0519D3924018DFE0017DEAC /* Coordinator.swift */; };
 		A0519D3C240191E80017DEAC /* CameraImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0519D3B240191E80017DEAC /* CameraImageView.swift */; };
+		A0DC58572401AB14002E76B3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DC58562401AB13002E76B3 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A0519D3124018AC60017DEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0519D3924018DFE0017DEAC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A0519D3B240191E80017DEAC /* CameraImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraImageView.swift; sourceTree = "<group>"; };
+		A0DC58562401AB13002E76B3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				A0519D3124018AC60017DEAC /* Info.plist */,
 				A0519D2424018AC20017DEAC /* Recycle.xcdatamodeld */,
 				A0519D2B24018AC60017DEAC /* Preview Content */,
+				A0DC58562401AB13002E76B3 /* HomeView.swift */,
 			);
 			path = Recycle;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0519D3C240191E80017DEAC /* CameraImageView.swift in Sources */,
+				A0DC58572401AB14002E76B3 /* HomeView.swift in Sources */,
 				A0519D2124018AC20017DEAC /* AppDelegate.swift in Sources */,
 				A0519D2624018AC20017DEAC /* Recycle.xcdatamodeld in Sources */,
 				A0519D2824018AC20017DEAC /* ContentView.swift in Sources */,

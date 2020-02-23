@@ -28,7 +28,7 @@ struct ContentView: View {
             if exists {
                 ZStack {
                     Color.green.edgesIgnoringSafeArea(.all)
-                    VStack {
+                    VStack{
                         HStack {
                             Button(action: { self.image = nil}) {
                                 Text("Back")
@@ -38,13 +38,18 @@ struct ContentView: View {
                             Spacer()
                         }
                         Spacer()
-                        Text(ModelFunction.guess)
-                        Text(ModelFunction.split[0])
-                        image?.resizable()
-                          .frame(width: 250, height: 200)
-                          .clipShape(Circle())
-                          .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                          .shadow(radius: 10)
+                        ScrollView {
+                            VStack {
+                                
+                                image?
+                                    .resizable()
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 300)
+                                RecycleView(item: ModelFunction.picker())
+                                Text(ModelFunction.guess)
+                                Text(ModelFunction.split[0])
+                                Spacer()
+                            }
+                        }
                     }
                 }
             }
@@ -68,41 +73,41 @@ struct ContentView: View {
                             .foregroundColor(Color.white)
                         
                         Spacer()
-
+                        
                         Button(action: {self.showCaptureImageView.toggle()}) {
-                             Text("♲")
-                               .font(.system(size: 260))
+                            Text("♲")
+                                .font(.system(size: 260))
                                 .fontWeight(.black)
-                               .foregroundColor(Color.white)
+                                .foregroundColor(Color.white)
                         }
                         .scaleEffect(show ? 1.3:1)
                         .animation(
                             Animation
-                            .easeInOut
+                                .easeInOut
                                 .speed(0.5)
                                 .repeatForever(autoreverses: true)
                         )
-                        .onAppear(){
-                            self.show.toggle()
+                            .onAppear(){
+                                self.show.toggle()
                         }
-
-                        image?.resizable()
-                          .frame(width: 250, height: 200)
-                          .clipShape(Circle())
-                          .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                          .shadow(radius: 10)
+                        
+                        //                        image?.resizable()
+                        //                          .frame(width: 250, height: 200)
+                        //                          .clipShape(Circle())
+                        //                          .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                        //                          .shadow(radius: 10)
                     }.sheet(isPresented: $showCaptureImageView) {
                         CaptureImageView(isShown: self.$showCaptureImageView, image: self.$image).edgesIgnoringSafeArea(.all)
                     }
-
-
-                }
-
+                    
+                    
+                }.transition(.scale)
+                
             }
         }
-    
+        
     }
-
+    
 }
 
 

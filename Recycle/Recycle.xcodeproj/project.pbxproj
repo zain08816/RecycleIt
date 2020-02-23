@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A017F6172402A02000ED5D91 /* RecycleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F6162402A02000ED5D91 /* RecycleItem.swift */; };
 		A0519D2124018AC20017DEAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0519D2024018AC20017DEAC /* AppDelegate.swift */; };
 		A0519D2324018AC20017DEAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0519D2224018AC20017DEAC /* SceneDelegate.swift */; };
 		A0519D2624018AC20017DEAC /* Recycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0519D2424018AC20017DEAC /* Recycle.xcdatamodeld */; };
@@ -16,12 +17,13 @@
 		A0519D3024018AC60017DEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0519D2E24018AC60017DEAC /* LaunchScreen.storyboard */; };
 		A0519D3A24018DFE0017DEAC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0519D3924018DFE0017DEAC /* Coordinator.swift */; };
 		A0519D3C240191E80017DEAC /* CameraImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0519D3B240191E80017DEAC /* CameraImageView.swift */; };
-		A0DC58572401AB14002E76B3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DC58562401AB13002E76B3 /* HomeView.swift */; };
 		A0DC585924023B03002E76B3 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A0DC585824023B03002E76B3 /* MobileNetV2.mlmodel */; };
 		A0DC585B24023BA8002E76B3 /* ModelFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DC585A24023BA8002E76B3 /* ModelFunction.swift */; };
+		A0DC585D240244FD002E76B3 /* RecycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DC585C240244FD002E76B3 /* RecycleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A017F6162402A02000ED5D91 /* RecycleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleItem.swift; sourceTree = "<group>"; };
 		A0519D1D24018AC20017DEAC /* Recycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0519D2024018AC20017DEAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0519D2224018AC20017DEAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +35,9 @@
 		A0519D3124018AC60017DEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0519D3924018DFE0017DEAC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A0519D3B240191E80017DEAC /* CameraImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraImageView.swift; sourceTree = "<group>"; };
-		A0DC58562401AB13002E76B3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A0DC585824023B03002E76B3 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNetV2.mlmodel; path = ../../../../Downloads/MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		A0DC585A24023BA8002E76B3 /* ModelFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFunction.swift; sourceTree = "<group>"; };
+		A0DC585C240244FD002E76B3 /* RecycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				A0519D3924018DFE0017DEAC /* Coordinator.swift */,
 				A0519D2024018AC20017DEAC /* AppDelegate.swift */,
 				A0519D2224018AC20017DEAC /* SceneDelegate.swift */,
+				A0DC585C240244FD002E76B3 /* RecycleView.swift */,
 				A0519D2724018AC20017DEAC /* ContentView.swift */,
 				A0DC585824023B03002E76B3 /* MobileNetV2.mlmodel */,
 				A0519D2924018AC60017DEAC /* Assets.xcassets */,
@@ -80,7 +83,7 @@
 				A0519D3124018AC60017DEAC /* Info.plist */,
 				A0519D2424018AC20017DEAC /* Recycle.xcdatamodeld */,
 				A0519D2B24018AC60017DEAC /* Preview Content */,
-				A0DC58562401AB13002E76B3 /* HomeView.swift */,
+				A017F6162402A02000ED5D91 /* RecycleItem.swift */,
 			);
 			path = Recycle;
 			sourceTree = "<group>";
@@ -164,8 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DC585D240244FD002E76B3 /* RecycleView.swift in Sources */,
 				A0519D3C240191E80017DEAC /* CameraImageView.swift in Sources */,
-				A0DC58572401AB14002E76B3 /* HomeView.swift in Sources */,
+				A017F6172402A02000ED5D91 /* RecycleItem.swift in Sources */,
 				A0DC585924023B03002E76B3 /* MobileNetV2.mlmodel in Sources */,
 				A0DC585B24023BA8002E76B3 /* ModelFunction.swift in Sources */,
 				A0519D2124018AC20017DEAC /* AppDelegate.swift in Sources */,

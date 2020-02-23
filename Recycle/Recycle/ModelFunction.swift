@@ -39,7 +39,7 @@ class ModelFunction {
             return RecycleItem(item: "Cups", description: "Styrofoam cups cannot be recycled, but paper and plastic ones can be.", other: guess)
         }
         else {
-            return RecycleItem(item: "Test", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu neque suscipit, viverra metus ac, vehicula erat. Pellentesque sed luctus mi. Aliquam ipsum arcu, vulputate vitae tristique quis, viverra nec quam. Pellentesque a condimentum leo. Suspendisse placerat dolor ut lacus ullamcorper elementum. Vestibulum urna mauris, eleifend eu lacus at, tempus pharetra magna. Sed rhoncus mauris a sapien interdum, a pharetra lacus sollicitudin.", other: guess)
+            return RecycleItem(item: "Unrecyclable/Can't Recognize", description: "Unfortunatly, either our app can not recognize the item or the item is not able to be recycled. If the later is the case, the best thing to do is try to reuse the item before you throw it out. If the former, we will add more categories and improve our machine learning model in the future!", other: guess)
         }
     }
     

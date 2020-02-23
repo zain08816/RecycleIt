@@ -38,6 +38,7 @@ struct ContentView: View {
                             Spacer()
                         }
                         Spacer()
+                        Text(ModelFunction.guess)
                         image?.resizable()
                           .frame(width: 250, height: 200)
                           .clipShape(Circle())

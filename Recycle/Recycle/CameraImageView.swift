@@ -14,9 +14,9 @@ struct CaptureImageView {
     @Binding var image: Image?
     
     func makeCoordinator() -> Coordinator {
-      return Coordinator(isShown: $isShown, image: $image)
+        return Coordinator(isShown: $isShown, image: $image)
     }
-
+    
 }
 
 extension CaptureImageView: UIViewControllerRepresentable {
@@ -32,7 +32,7 @@ extension CaptureImageView: UIViewControllerRepresentable {
                                 context: UIViewControllerRepresentableContext<CaptureImageView>) {
         
     }
-
+    
 }
 
 

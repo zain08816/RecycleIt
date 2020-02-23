@@ -43,6 +43,7 @@ struct ContentView: View {
                                 
                                 image?
                                     .resizable()
+                                    .aspectRatio(contentMode: .fill)
                                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 300)
                                 RecycleView(item: ModelFunction.picker())
                                 Text(ModelFunction.guess)

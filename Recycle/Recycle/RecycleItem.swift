@@ -13,6 +13,5 @@ import SwiftUI
 struct RecycleItem {
     var item: String
     var description: String
-    var image: Image
     var other: String
 }

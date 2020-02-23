@@ -32,6 +32,7 @@ struct ContentView: View {
                         HStack {
                             Button(action: { self.image = nil}) {
                                 Text("Back")
+                                    .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                             }
                             .padding([.top, .leading])
@@ -43,11 +44,9 @@ struct ContentView: View {
                                 
                                 image?
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 300)
+                                    .scaledToFit()
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
                                 RecycleView(item: ModelFunction.picker())
-                                Text(ModelFunction.guess)
-                                Text(ModelFunction.split[0])
                                 Spacer()
                             }
                         }

@@ -16,13 +16,15 @@ struct RecycleView: View {
     var body: some View {
         VStack {
             Text(item.item)
-                .font(.title)
+                .font(.largeTitle)
+                .fontWeight(.semibold)
                 .foregroundColor(Color.white)
                 .padding(.vertical)
             Text(item.description)
+                .font(.headline)
                 .foregroundColor(Color.white)
                 .padding(.vertical)
-            Text(item.other)
+            Text("This is probably a \(item.other)")
                 .foregroundColor(Color.white)
                 .padding(.vertical)
         }

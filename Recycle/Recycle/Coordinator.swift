@@ -25,7 +25,7 @@ class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerContro
         imageInCoordinator = Image(uiImage: unwrapImage)
         isCoordinatorShown = false
         
-        let image = unwrapImage
+        var image = unwrapImage.copy() as! UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 224, height: 224), true, 2.0)
         image.draw(in: CGRect(x: 0, y: 0, width: 224, height: 224))

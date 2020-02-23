@@ -15,6 +15,10 @@ class ModelFunction {
     static var guess: String = ""
     
     static var model:MobileNetV2 = MobileNetV2()
+    static var split: [String] {
+        print(guess.components(separatedBy: ", "))
+        return guess.components(separatedBy: ", ")
+    }
     
 //    init() {
 //        model = MobileNetV2()

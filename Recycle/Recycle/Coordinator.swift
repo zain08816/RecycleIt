@@ -60,7 +60,7 @@ class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerContro
             return
         }
          
-        ModelFunction.guess = "I think this is a \(prediction.classLabel)."
+        ModelFunction.guess = prediction.classLabel
         
         
     }

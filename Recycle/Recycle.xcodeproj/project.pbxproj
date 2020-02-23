@@ -68,6 +68,7 @@
 		A0519D1F24018AC20017DEAC /* Recycle */ = {
 			isa = PBXGroup;
 			children = (
+				A0DC585A24023BA8002E76B3 /* ModelFunction.swift */,
 				A0519D3B240191E80017DEAC /* CameraImageView.swift */,
 				A0519D3924018DFE0017DEAC /* Coordinator.swift */,
 				A0519D2024018AC20017DEAC /* AppDelegate.swift */,
@@ -80,7 +81,6 @@
 				A0519D2424018AC20017DEAC /* Recycle.xcdatamodeld */,
 				A0519D2B24018AC60017DEAC /* Preview Content */,
 				A0DC58562401AB13002E76B3 /* HomeView.swift */,
-				A0DC585A24023BA8002E76B3 /* ModelFunction.swift */,
 			);
 			path = Recycle;
 			sourceTree = "<group>";
